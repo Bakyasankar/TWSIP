@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    height: auto;
+    max-width:100% ;
+    padding: 1rem;
+ 
+}
+body{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    font: 1.5rem;
+    width: 100%;
+    background-color: rgb(237, 226, 215);
+    /* z-index: -1;  */
+}
+.offscreen{
+     position:absolute;
+     left: -100000px;
+}
+header,footer{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    background-color: slategrey;
+    display: flex;
+    flex-direction:column;
+    color:black;
+    text-align: center; 
+    font-size: 1.5rem;
+   
+}
+
+nav ul{
+    background-color: bisque;
+    justify-content: space-evenly;
+    display: flex;
+    list-style-type: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-bottom:2px solid black;
+   
+}
+
+.bottom{
+    background-color:#485e7c;
+    color: white;
+    padding: 0.5rem;
+    
+}
+nav a,
+nav a:visited{
+    color:black;
+}
+nav a:hover,nav a:focus{
+    color: #485e7c;
+    box-shadow:0 5px -5px 10px blue;
+}
+.hero{
+    margin-top: 1.5rem;
+    z-index: -1;
+}
+.articles{
+    border-radius:10%;
+}
+table{
+    border: 3px solid black;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    width: 80%;
+    height: 80vh;
+    margin: 10px;
+   
+}
+td,th,tr{
+    border: 0.5px solid black;
+    padding: 1rem;
+    text-align: center;
+    
+   
+}
+
+
+.hero p{
+    animation: animate 1.0s ease-in-out 1 forwards;
+    position: absolute;
+    background-color: black;
+    display: inline;
+    color: white;
+    padding: 0.5rem;
+    top: 160px;
+    left: 20px;
+}
+@keyframes animate {
+   0%{
+    top:-40px;
+    transform: skew(0deg,-5deg);
+   
+   }
+   80%{
+    top: 20px;
+    transform: skew(-10deg, -5deg)
+    scaley(1.2);
+   }
+   100%{
+   
+    transform:skew(-10deg,-5deg) 
+    scaley(1);
+   }
+}
